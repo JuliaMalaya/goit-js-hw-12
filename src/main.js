@@ -89,7 +89,7 @@ async function loadMore() {
       behavior: 'smooth',
     });
     
-    if (page * per_page > data.totalHits) {
+    if (currentPage * per_page > data.totalHits) {
       throw new Error('We\'re sorry, but you\'ve reached the end of search results.');
     }
   } catch (error) {
