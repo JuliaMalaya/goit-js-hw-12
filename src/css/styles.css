@@ -137,15 +137,16 @@ body {
   font-size: 12px;
   line-height: 200%;
   letter-spacing: 0.04em;
-}
-
-.image-elem {
   margin-right: 10px;
 }
+
 
 .info {
   display: flex;
   flex-direction: row;
+  text-decoration: none;
+  justify-content: space-evenly;
+  align-content: center;
 }
 
 .hidden {

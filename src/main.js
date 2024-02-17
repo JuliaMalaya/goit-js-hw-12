@@ -8,8 +8,9 @@ const searchForm = document.querySelector('.search-form');
 const galleryList = document.querySelector('.gallery-list');
 const searchInput = document.querySelector('.search-input');
 
-let imageViewer;
+let imageViewer;.0
 let currentPage = 1;
+let per_page = 15;
 let searchQuery = '';
 const loader = document.querySelector('#loader')
 const loadMoreBtn = document.querySelector('#load-more');
@@ -115,7 +116,7 @@ async function fetchImages(query) {
           orientation: 'horizontal',
           safesearch: true,
           page: currentPage,
-          per_page: 15
+          per_page,
 }
     });
     return response.data;
