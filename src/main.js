@@ -8,7 +8,7 @@ const searchForm = document.querySelector('.search-form');
 const galleryList = document.querySelector('.gallery-list');
 const searchInput = document.querySelector('.search-input');
 
-let imageViewer;.0
+let imageViewer;
 let currentPage = 1;
 let per_page = 15;
 let searchQuery = '';
@@ -24,6 +24,8 @@ async function searchImages(event) {
   loadMoreBtn.classList.replace('load-more', 'hidden');
   searchQuery = searchInput.value;
 
+  currentPage = 1;
+
   const searchValue = searchInput.value.trim();
      if (searchValue === '') {
             iziToast.error({
@@ -31,7 +33,7 @@ async function searchImages(event) {
             message: 'Please enter a search query!',
             position: 'topRight'
         });
-        loader.style.display = 'none';
+       loader.classList.remove('loader');
         return; 
   }
   
